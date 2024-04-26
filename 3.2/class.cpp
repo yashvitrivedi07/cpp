@@ -18,6 +18,7 @@ class Hotel{
 private:
 
 int hotel_id;
+static int id;
 int  hotel_establish_year;
 string hotel_name;
 static string hotel_type;
@@ -31,10 +32,7 @@ public :
 
 void setdata()
 {
-    cout <<endl << "enter hotel id : ";
-    cin >> hotel_id;
-
-    cout << "enter hotel name : ";
+    cout << endl << "enter hotel name : ";
     cin >> hotel_name;
 
     cout << "enter hotel year : ";
@@ -45,6 +43,8 @@ void setdata()
 
     cout << "enter hotel room quality : ";
     cin >> hotel_room_quantity;
+
+    hotel_id = id++;
 }
 
 void getdata()
@@ -72,3 +72,4 @@ static int count()
 string Hotel :: hotel_type = " hotel " ;
 string Hotel :: hotel_location = "surat";
 string Hotel :: hotel_rating = "5 star";
+int Hotel :: id = 2306500 ;

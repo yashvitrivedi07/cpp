@@ -18,11 +18,8 @@ int main()
     for(int i=0; i<n; i++)
     {
         cout << "product no . [" << i+1 <<"] --- "  ; 
-        s[i].setdata();
-        
+        s[i].setdata();  
     }
-
-    cout << endl << endl <<"Enter id and password to see product history : --" << endl ;
 
     int fid = S.setid();
     string fpassword = S.setpass();
@@ -35,19 +32,19 @@ int main()
       pro_id[i] = s[i].getnumber();   
    }
 
-
-    for (int i=0; i<n; i++)
-    {
+  for (int i=0; i<n; i++)
+{
        
-       if (fid == S.id2() && fpassword == S.password2() ) {
+    if (fid == S.id2() && fpassword == S.password2() ) {
 
          cout << endl << "Enter product id : ";
          cin >> product_id;
 
          cout << endl;
-
-
-        
+          
+        for(int i=0; i<n; i++)
+        {
+             
              if(pro_id[i] == product_id)
             {
                cout << endl ;
@@ -56,11 +53,11 @@ int main()
                s[i].getprice();
                s[i].getquantity();
                s[i].getdiscount();
+               pro_id[i] ++ ;
             }
-
-            else{
-                cout << "invalid product id : ";
-            }
+            
+        }
+          
        }
 
         else

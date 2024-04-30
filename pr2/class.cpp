@@ -49,6 +49,8 @@ class SuperMarket{
 
         cout  << "Enter item Discount : ";
         cin >> discount; 
+
+        cout << endl << endl <<"Enter id and password to see product history : --" << endl ;
     }
 
     int getnumber()

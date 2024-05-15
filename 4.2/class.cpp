@@ -6,7 +6,7 @@ Q.1 Write a Program to print the rate of interest of different banks using hiera
 - inherit rate attribute and getROI() method in all child
 classes
 
-Q.2 Write a Program to perform four different numbers� sum by inheriting constructors in hybrid inheritance.
+Q.2 Write a Program to perform four different numbers sum by inheriting constructors in hybrid inheritance.
 */
 #include<iostream>
 using namespace std;
@@ -206,8 +206,9 @@ class D : public B , C
 
 	void Sum()
 	{
-		sum = B::a+ b+ c+ d;
-		cout << "sum : " << sum;
+		    sum = B::a + b + C::a + d; // Specify the base class for 'a'
+            cout << "sum : " << sum;
+
 	}
 
 };

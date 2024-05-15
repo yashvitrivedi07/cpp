@@ -43,40 +43,38 @@ Output:
 Km: 8, Meter: 70
 */
 
-class Setdata{
+#include <iostream>
+using namespace std;
 
-      private :
+class Distance {
+	
+private:
+    int km;
+    int meter;
 
-      int km , km1;
-      int meter , meter1;
+public:
+    
+    void setKm() {
+        cout<<"Enter Km : ";
+        cin>>km;
+    }
 
-      public :
+    void setMeter() {
+        cout<<"Enter meter : ";
+        cin>>meter;
+    }
 
-      Setdata()
-      {
-            cout <<  "Enter km : ";
-            cin >> km;
+    Distance operator + (Distance s2) {
+        Distance S;
+        int totalMeter = (km * 1000 + meter) + (s2.km * 1000 + s2.meter);
+        S.km = totalMeter / 1000;
+        S.meter = totalMeter % 1000;
+        return S;
+    }
 
-            cout << "Enter meter : ";
-            cin >> meter;
-
-            cout <<  "Enter km : ";
-            cin >> km1;
-
-            cout << "Enter meter : ";
-            cin >> meter1;
-
-
-
-      }
-
-      void add()
-      {
-            km = km+ km1;
-            km1 = km+(meter + meter1)/1000;
-            
-            meter = (meter + meter1) % 1000;
-
-            cout << " Km : meter " <<endl << " "<<km1 << " : " << meter;
-      }
+  
+    void getData() {
+       cout << "km : meter" << endl << km <<" : " <<meter <<endl;
+    }
 };
+     

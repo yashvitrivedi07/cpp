@@ -119,13 +119,6 @@ S(): A1(), A2()
 }
 };
 
-// Driver code
-int main()
-{
-S obj;
-return 0;
-}
-
 */
 
 class A
@@ -140,10 +133,7 @@ class A
 		cout << "Enter a : ";
 		cin >> a;
 	}
-	void getdata()
-	{
-		cout << "A : " <<a;
-	}
+	
 };
 
 class B : public A
@@ -158,10 +148,7 @@ class B : public A
 		cout << "Enter B : ";
 		cin >> b;
 	}
-	void getdata1()
-	{
-		cout << "B : " << b;
-	}
+	
 		
 
 };
@@ -178,10 +165,7 @@ class C : public A
 		cout << "Enter c : ";
 		cin >> c;
 	}
-	void getdata2()
-	{
-		cout << "c : " <<c;
-	}
+	
 
 };
 
@@ -199,16 +183,11 @@ class D : public B , C
         cin >> d;
     }
 
-    void getdata3() {
-  
-        cout << "d : " << d << endl;
-    }
 
 	void Sum()
 	{
-		    sum = B::a + b + C::a + d; // Specify the base class for 'a'
+		    sum = B::a + b  + c + d;
             cout << "sum : " << sum;
-
 	}
 
 };

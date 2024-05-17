@@ -5,37 +5,43 @@ Q.1 Write a Program to overload < operator to find which object contains a highe
 value from given 2 numbers.
 */
 
-class Compare{
-     private :
-     int a,b;
+#include<iostream>
+using namespace std;
 
-     public:
-     void setdata()
-     {
-             cout << "Enter a : ";
-             cin >> a;
+class Number{
+    protected:
+        int a , b;
 
-             cout << "Enter b : ";
-             cin >> b;
-     }
+      public :
 
-     void getdata()
-     {
-        cout << "a : " << a;
-        cout << "b : " << b;
-     }
-
-      Compare operator < (int b)
-     {
-           int temp;
-
-           if(a<b)
-           {
-                 temp = b;
-           }
-           else{
-                 temp = a;
-           }
-     }
-
+        void setdata(){
+            cout << "Enter Number : "; cin >> a;
+            cout << "Enter second Number : ";
+            cin >> b;
+        }
+        Number operator< (int b)
+        {
+            if (a < b)
+            {
+                return a;
+            }
+            else{
+                return b;
+            }
+        }
 };
+
+int main()
+{
+    Number n1, n2;
+    n1.setdata();
+    n2.setdata();
+    if(n1 < n2){
+        cout << " n2 is Maximum value...";
+    }
+    else{
+        cout << " n1 is Maximum value...";
+    }
+    return 0;
+}
+

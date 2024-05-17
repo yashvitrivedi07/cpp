@@ -2,9 +2,7 @@
    Q.1 Write a Program to create a class that illustrates the concept of 
    handling all types of exceptions using general exceptions.
 
-Q.2 Write a Program to throw 0 if the age of the user is less than 18, 
-otherwise print that you are eligible to vote. Also, handle that thrown 
-exception and print you are not eligible to vote.
+
 */
 
 #include<iostream>>

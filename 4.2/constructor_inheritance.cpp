@@ -1,22 +1,18 @@
 #include "class.cpp"
-
-
-    int main() {
+    
+    
+    int main()
+{
     D obj;
-    
-    obj.B::setdata();
+    obj.C::setdata(); 
     obj.B::setdata1();
-     // Qualifying setdata2() with the base class C
-    obj.setdata3();
-
-    obj.B::getdata();
-    obj.B::getdata1();
-   
-    obj.getdata3();
-    
+    obj.C::setdata2();
+    obj.D::setdata3();
     obj.Sum();
 
-
     return 0;
-    }
+}
+    
+
+
 

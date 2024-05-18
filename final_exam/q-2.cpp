@@ -7,16 +7,16 @@ int main()
 	cout << "Enter no. of employee : ";
 	cin >> n;
 	
-	Employee e[n];
+	employee e[n];
 	
 	for(i=0; i<n; i++)
 	{
-		e[i].setdata();
+		e[i].set_data();
 		
 	}
 	for(i=0; i<n; i++)
 	{
-		e[i].getdata();
+		e[i].get_data();
 		
 	}
 	
